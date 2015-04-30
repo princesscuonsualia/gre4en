@@ -13,36 +13,26 @@
           </block>
         </value>
         <next>
-          <block type="controls_whileUntil" id="293" inline="false">
-            <field name="MODE">UNTIL</field>
-            <value name="NUMBER">
-              <block type="sensor_button" id="308">
-                <field name="OBJECT">ENTER</field>
+          <block type="controls_if" id="185" inline="false">
+            <value name="IF0">
+              <block type="sensor_spectrometer" id="205">
+                <field name="LIGHT">GREEN</field>
               </block>
             </value>
-            <statement name="DO">
-              <block type="controls_if" id="185" inline="false">
-                <value name="IF0">
-                  <block type="sensor_spectrometer" id="205">
-                    <field name="LIGHT">GREEN</field>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="movement_forward" id="272">
-                    <next>
-                      <block type="robot_delay" id="214" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="236">
-                            <field name="NUM">1000</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="movement_stop" id="262"></block>
-                        </next>
+            <statement name="DO0">
+              <block type="movement_forward" id="272">
+                <next>
+                  <block type="robot_delay" id="214" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="236">
+                        <field name="NUM">1000</field>
                       </block>
+                    </value>
+                    <next>
+                      <block type="movement_stop" id="262"></block>
                     </next>
                   </block>
-                </statement>
+                </next>
               </block>
             </statement>
           </block>
